@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8"/>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>新建计划</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+		<script>
+        function add() {
+            var journey = $("#journey").val();
+                $.get("insert", { journey: journey }, function() {
+                    alert("添加成功");
+					window.location.href="/";
+                });
+            }
+        </script>
+	</head>
+            <body>
+                <div  >
+                  <textarea id="journey"  cols="40" rows="10"  placeholder="行程" ></textarea>
+                </br>
+                  <button onclick="add()"  >添      加</button>
+                    
+                    </div>
+                </div>
+            </body>
+            </html>
